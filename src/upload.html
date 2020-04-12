@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+    <link type="text/css" rel="stylesheet" href="css/upload.css">
+   <script>
+       function changepic() {
+           var reads = new FileReader();
+           f = document.getElementById('file').files[0];
+           reads.readAsDataURL(f);
+           reads.onload = function(e) {
+               document.getElementById('img').src = this.result;
+               document.getElementById('url').innerText = "";
+           };
+       }
+
+   </script>
+
+</head>
+<body>
+<div id="w" >
+    <nav id="daohang">
+        <ul>
+            <li > <a href="home.html">Home</a></li>
+            <li><a href="browser.html" >Browse</a></li>
+            <li> <a href="Search.html" id="search">Search</a></li>
+            <div id="account2">
+                <span id="account">Account</span>
+                <div id="account1">
+                    <p> <a href="upload.html"><img src="images/logo1.jpg.png" width="15" height="15">上传</a></p>
+                    <p>   <a href="MyPhoto.html"><img src="images/logo2.png" width="15" height="15">我的照片</a></p>
+                    <p><a href="favor.html"><img src="images/logo3.png" width="15" height="15">我的收藏</a></p>
+                    <p> <a href="../index.html"><img src="images/logo4.jpg" width="15" height="15">登录</a></p>
+                </div>
+            </div>
+
+        </ul>
+    </nav>
+</div>
+<section>
+    <div id="s">
+        <div id="title1">
+            Upload
+            <input type="file" style="opacity: 0" id="file" onchange="changepic()" accept="image/jpeg,image/jpg,image/png">
+        </div>
+        <div id="r">
+            <div id="shuangchuang">
+                <div id="picture"><img id="img" width="350px" height="300px">
+                </div>
+                <div id="url">
+                    图片未上传
+                </div>
+                <br>
+                    <button class="up2" onclick="document.getElementById('file').click()">upload</button>
+            </div>
+            <div id="form">
+                <form action="MyPhoto.html">
+                    <p class="title2">图片标题：</p>
+                    <input type="text" id="tupianbiaoti">
+                    <p class="title2">图片描述：</p>
+                    <textarea id="tupianmiaoshu"></textarea>
+                    <p class="title2">拍摄国家：</p>
+                    <input type="text" id="paisheguojia">
+                    <p class="title2">拍摄城市：</p>
+                    <input type="text" id="paishechengshi">
+                    <br>
+                    <br>
+                    <input type="submit" id="submit" value="submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    Copyright:@2019-2021 Web fudamental All Right Reserved  备案号：19302010041
+</footer>
+</body>
+</html>
