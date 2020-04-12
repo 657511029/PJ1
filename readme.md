@@ -4,7 +4,7 @@
 
 GitHub地址：http://github.com/657511029/PJ1
 
-GitHub pages地址：
+GitHub pages地址： https://657511029.github.io/PJ1/
 
 项目完成情况：
 基础功能都能实现；
